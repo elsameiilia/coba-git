@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>risdat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+            <h2 class="judul1">HASIL ANALISIS</h2>
+            <h2 class="judul2">SUPER SURVEI 4.0</h2>
+            <h4>Solusi Mengatasi Gangguan Psikologis</h4>
+            <article id="chart" class="chart">
+                <div class="hasil-survei">
+                </div>
+            </article><br>
+            <article class="simpulan-1">
+                <p>Berdasarkan hasil survei, sebagian besar responden memilih <b>Beribadah</b> sebagai solusi dalam mengatasi gangguan psikologis, dengan jumlah sebanyak <b>904</b> responden.
+                </p>
+            </article><br>
+            <article class="simpulan-2">
+                <p><b>Lainnya:</b><i> Tidur, istirahat, olahraga, memasak, menulis, mendengarkan musik, meditasi, traveling, makan makanan favorit, bermain dengan hewan peliharaan, menonton film, anime, menulis, potong rambut, bersih-bersih kamar, dan naik gunung.</i></p>
+            </article>
+    </div><br>
+    <div class="gambar">
+        <img src="amerti.png" alt="amerti">
+        <img src="gedung.png" alt="gedung">
+    </div>
+    <script>
+        const data = [
+            { jawaban: "Beribadah", persen: 90.4 },
+            { jawaban: "Mencari hiburan", persen: 78.5 },
+            { jawaban: "Menyibukkan diri", persen: 58.4 },
+            { jawaban: "Mencoba hal baru yang positif", persen: 54.6 },
+            { jawaban: "Menghubungi orang dipercaya", persen: 48.3 },
+            { jawaban: "Lainnya", persen: 12.7 }
+        ];
+
+        function createBarChart() {
+            const chartElement = document.querySelector('.chart .hasil-survei');
+            
+            data.forEach(item => {
+                const figure = document.createElement('figure');
+                
+                const jawaban = document.createElement('div');
+                jawaban.className = 'jawaban';
+                jawaban.textContent = item.jawaban;
+                
+                const bar = document.createElement('div');
+                bar.className = 'bar';
+                bar.style.width = `${item.persen * 0.9}%`;
+                
+                const angka = document.createElement('span');
+                angka.className = 'angka';
+                angka.textContent = item.persen.toFixed(1);
+                
+                const persen = document.createElement('span');
+                persen.className = 'persen';
+                persen.textContent = `${item.persen}%`;
+                
+                bar.appendChild(angka);
+                bar.appendChild(persen);
+                
+                figure.appendChild(jawaban);
+                figure.appendChild(bar);
+                
+                chartElement.appendChild(figure);
+            });
+        }
+        createBarChart();
+    </script>
+</body>
+</html>

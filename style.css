@@ -1,0 +1,138 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(to bottom, #1d2675 60%, #6771cc);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial;
+}
+
+.main h4{
+    margin-top: 10px;
+    color: white;
+}
+
+.main h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: fantasy;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin: 10px 10px 1px 10px;
+}
+
+.judul1{
+    font-size: xx-larger;
+    color: black;
+    text-shadow: 
+        3px 3px 0px white,
+        3px -3px 0px white,
+        -3px 3px 0px white,
+        -3px -3px 0px white;  
+}
+
+.judul2{
+    font-size: xx-larger;
+    color: #0d49b2;
+    text-shadow: 
+        3px 3px 0px white,
+        3px -3px 0px white,
+        -3px 3px 0px white,
+        -3px -3px 0px white;
+    position: relative;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+}
+
+.judul2::before{
+    border: 2px solid white;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #005ED8, #202979);
+    transform: skewX(-20deg);
+    z-index: -1;
+}
+
+#chart{
+    text-align: justify;
+    width: 90%;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 20px 10px 10px;
+    box-sizing: border-box;
+}
+
+.gambar{
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+    width: auto;;
+    height: 100px;
+}
+
+.chart {
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+}
+
+.hasil-survei {
+    width: 100%;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.hasil-survei figure {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.hasil-survei .jawaban {
+    width: 120px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.hasil-survei .bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 30px;
+    background-color: darkslategray;
+    color: white;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+.hasil-survei .persen {
+    position: absolute;
+    right: -50px;
+    color: black;
+}
+
+.simpulan-1, .simpulan-2{
+    text-align: justify;
+    width: 90%;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 20px 10px 10px;
+    box-sizing: border-box;
+}
